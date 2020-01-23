@@ -32,7 +32,7 @@ cd Pho
 npm install
 ```
 
-format the `.env` reads as follows:
+Be sure that the `connection` reads as follows:
 ```bash
     DB_HOST=localhost
     DB_PORT=3306
