@@ -15,7 +15,7 @@ app.set("view engine", "handlebars");
 app.use(express.static("public"));
 
 //routes
-const routes = require("./controllers/burgers_controller.js")
+const routes = require("./controllers/pho_controller.js")
 app.use(routes);
 
 //start Server

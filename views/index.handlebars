@@ -1,0 +1,30 @@
+
+
+<h2>Pho Menu</h2>
+<ul>
+    {{#each pho}}
+        {{#unless slurped}}
+            {{> pho/pho-block slurped=false}}
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Finished:</h2>
+<ul>
+    {{#each pho}}
+        {{#if slurped}}
+            {{> pho/pho-block slurped=true}}
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Add a Pho</h2>
+<form action="create-form">
+
+    <div class="form-group">
+        <label for="pho">Pho</label>
+        <input type="text"
+    </div>
+</form>
+
+

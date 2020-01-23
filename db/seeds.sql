@@ -1,6 +1,6 @@
 
-INSERT INTO burgers(burger_name)
-VALUES ("KRUSTY BURGER");
+INSERT INTO pho(pho_name)
+VALUES ("Oxtail Phở");
 
-INSERT INTO burgers(burger_name)
-VALUES("Kraby Patty");
+INSERT INTO pho(pho_name)
+VALUES("Phở Tai");

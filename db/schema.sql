@@ -1,12 +1,12 @@
-DROP DATABASE IF EXISTS burger_db;
+DROP DATABASE IF EXISTS pho_db;
 
-CREATE DATABASE burger_db;
+CREATE DATABASE pho_db;
 
-USE burger_db;
+USE pho_db;
 
-CREATE TABLE burgers(
+CREATE TABLE pho(
     id INT NOT NULL AUTO_INCREMENT,
-    burger_name VARCHAR(35) NOT NULL,
-    devoured BOOLEAN DEFAULT FALSE,
+    pho_name VARCHAR(35) NOT NULL,
+    slurped BOOLEAN DEFAULT false,
     PRIMARY KEY (id)
 );
