@@ -1,12 +1,17 @@
 var connection = require("../config/connection.js")
 
+module.exports = {
 
-function selectAll(){
-
-};
-function insertOne(){
-
-};
-function updateOne(){
-
-};
+    selectAll: (tableName, cb) => {
+        connection.query("SELECT * FROM ??",[tableName],(err,res) =>{
+            if(err) throw err;
+            cb(res);
+        })
+    };
+    function insertOne(){
+        
+    };
+    function updateOne(){
+        
+    };
+}
