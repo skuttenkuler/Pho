@@ -2,22 +2,51 @@
 
 <h2>Pho Menu</h2>
 <ul>
-    {{#each pho}}
-        {{#unless slurped}}
-            {{> pho/pho-block slurped=false}}
-        {{/unless}}
-    {{/each}}
-</ul>
+    <div class="col-12 col-lg-5 bg-dark rounded">
+            <div class="container">
+                <div class="row">
+                    {{#each pho}}
+                        {{#unless slurped}}
+                        <div class="col-12 col-xl-6 mb-4">
+                            <div class="card bg-warning">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title">{{pho_name}}</h3>
+                                    <button class="btn btn-lg btn-danger change-devoured" data-id={{id}} data-devoured={{slurped}}>
+                                        SLURP!
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        {{/unless}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
 
-<h2>Finished:</h2>
-<ul>
-    {{#each pho}}
-        {{#if slurped}}
-            {{> pho/pho-block slurped=true}}
-        {{/unless}}
-    {{/each}}
-</ul>
-
+        <div class="col-12 col-lg-5 bg-dark pb-3 rounded">
+            <h1 class="text-center text-white py-2">Pho Slurped:</h1>
+            <div class="container">
+                <div class="row">
+                    {{#each pho}}
+                        {{#if slurped}}
+                        <div class="col-12 col-xl-6 mb-4">
+                            <div class="card bg-warning">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title">{{pho_name}}</h3>
+                                    <button class="btn btn-lg btn-danger change-devoured" data-id={{id}} data-devoured={{slurped}}>
+                                        Add Pho!
+                                    </button>
+                                    <button class="btn btn-lg btn-danger mt-3 delete" data-id={{id}}>
+                                       Make room for Pho
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
 <h2>Add a Pho</h2>
 <form action="create-form">
 
