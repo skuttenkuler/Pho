@@ -3,7 +3,7 @@ var orm = require("../config/orm.js");
 var Pho = {
     all: function(cb) {
         orm.selectAll("pho", function(res) {
-            cd(res);
+            cb(res);
         });
     },
 

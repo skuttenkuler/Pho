@@ -11,7 +11,7 @@
                             <div class="card bg-warning">
                                 <div class="card-body text-center">
                                     <h3 class="card-title">{{pho_name}}</h3>
-                                    <button class="btn btn-lg btn-danger change-devoured" data-id={{id}} data-devoured={{slurped}}>
+                                    <button class="btn btn-lg btn-danger slurp" data-id={{id}} data-devoured={{slurped}}>
                                         SLURP!
                                     </button>
                                 </div>
@@ -33,8 +33,8 @@
                             <div class="card bg-warning">
                                 <div class="card-body text-center">
                                     <h3 class="card-title">{{pho_name}}</h3>
-                                    <button class="btn btn-lg btn-danger change-devoured" data-id={{id}} data-devoured={{slurped}}>
-                                        Add Pho!
+                                    <button class="btn btn-lg btn-danger slurp" data-id={{id}} data-devoured={{slurped}}>
+                                        Return Pho...
                                     </button>
                                     <button class="btn btn-lg btn-danger mt-3 delete" data-id={{id}}>
                                        Make room for Pho
@@ -48,11 +48,12 @@
             </div>
         </div>
 <h2>Add a Pho</h2>
-<form action="create-form">
+<form class="addPho" action="create-form">
 
     <div class="form-group">
         <label for="pho">Pho</label>
-        <input type="text"
+        <input id="newPho" type="text" placeholder="Pho Tai">
+        <button>Add!</button>
     </div>
 </form>
 

@@ -30,7 +30,7 @@ router.put("/api/pho/:id", function(req, res){
     pho.update(
         {
 
-            pho: [req.body.name, req.body.boolean]
+            pho: req.body.boolean
         },
         condition,
         function(result){
