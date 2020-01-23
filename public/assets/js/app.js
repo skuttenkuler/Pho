@@ -1,4 +1,4 @@
-$(function(){
+function CRUD(){
     $(".slurp").on("click", function(event){
         event.preventDefault();
         $.ajax({
@@ -37,4 +37,4 @@ $(function(){
             location.reload();
         });
     });
-});
+};
